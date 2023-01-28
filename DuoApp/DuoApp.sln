@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuoApp", "DuoApp.csproj", "{CB477724-2DAD-4690-8DDF-EFDC5A5FF177}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DuoApp", "DuoApp.csproj", "{CB477724-2DAD-4690-8DDF-EFDC5A5FF177}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiConnectionLibrary", "..\ApiConnectionLibrary\ApiConnectionLibrary.csproj", "{500C1A96-079A-4547-9F61-5579A0624F31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiConnectionLibrary", "..\ApiConnectionLibrary\ApiConnectionLibrary.csproj", "{500C1A96-079A-4547-9F61-5579A0624F31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
