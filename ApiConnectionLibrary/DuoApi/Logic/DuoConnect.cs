@@ -11,10 +11,11 @@ public class DuoConnect : DuoEndPoint
 	{
 		var config = DuoConfigHelper.ReadAppConfig();
 		string apiEndpoint, requestParams;
+		string method = "";
 		
-		DuoEndPoint.GetDuoTenants(out apiEndpoint, out requestParams, out Method requestMethod);
+		DuoEndPoint.GetDuoTenants(out apiEndpoint, out requestParams, out method, out Method requestMethod);
 
-		(var authHeader, var date) = SignatureHelper.GetAuthHeader(config, apiEndpoint, requestParams);
+		(var authHeader, var date) = SignatureHelper.GetAuthHeader(config, apiEndpoint, requestParams, method);
 
 		var client = new RestClient($"https://{config.apiHost}");
 
@@ -22,7 +23,7 @@ public class DuoConnect : DuoEndPoint
 		request.AddHeader("X-Duo-Date", $"{date}");
 		request.AddHeader("Content-Type", "application/x-www-form-urlencoded");
 		request.AddHeader("Authorization", $"Basic {authHeader}");
-
+		
 		RestResponse response = client.Execute(request);
 		//Console.WriteLine(response.Content);
 		if (response.IsSuccessful)

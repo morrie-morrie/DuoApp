@@ -8,11 +8,11 @@ namespace ApiConnectionLibrary.DuoApi.Helpers;
 
 public class SignatureHelper
 {
-    public static (string authHeader, string date) GetAuthHeader(ConfigModel config, string apiEndpoint, string requestParams)
+    public static (string authHeader, string date) GetAuthHeader(ConfigModel config, string apiEndpoint, string requestParams, string method)
     {
 
         Dictionary<string, string> requestMethod = new Dictionary<string, string>();
-        requestMethod.Add("requestMethod", "POST");
+        requestMethod.Add("requestMethod", $"{method}");
 
         var date = DateTime.UtcNow.ToString("ddd, dd MMM yyyy HH:mm:ss -0000");
         var formattedParams = requestParams.Trim();
