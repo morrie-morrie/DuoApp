@@ -3,7 +3,7 @@ using System.Configuration;
 
 namespace ApiConnectionLibrary.DuoApi.Helpers
 {
-	public class DuoApiHelper
+	public class DuoConfigHelper
 	{
 		public static ConfigModel ReadAppConfig()
 		{
