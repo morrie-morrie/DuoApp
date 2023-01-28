@@ -4,8 +4,11 @@ C# Console app which connects you to the Cisco DUO Accounts API. This is used by
 There is an example.config file. Rename and put it into the DuoApp root directory with the following changes:
 
 ApiHost = your Duo API Host for the Duo Application
+
 ApiKey = The intergration Key for the Duo Application
+
 ApiSecret = The Secret for the Duo Application
+
 
 You should read the following documentation from Duo in order to configure your application. This should be in your Administration Parent Account. (It'll be the first one you log into.
 https://duo.com/docs/accountsapi
