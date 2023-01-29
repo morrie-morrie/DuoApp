@@ -8,7 +8,7 @@ namespace ApiConnectionLibrary.DuoApi.Helpers;
 
 public class SignatureHelper
 {
-    public static (string authHeader, string date) GetAuthHeader(ConfigModel config, string apiEndpoint, string requestParams, string method)
+    public static (string authHeader, string date) GetAuthHeader(IConfigModel config, string apiEndpoint, string requestParams, string method)
     {
         Dictionary<string, string> requestMethod = new Dictionary<string, string>();
         requestMethod.Add("requestMethod", $"{method}");

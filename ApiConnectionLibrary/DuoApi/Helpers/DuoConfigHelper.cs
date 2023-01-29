@@ -5,7 +5,7 @@ namespace ApiConnectionLibrary.DuoApi.Helpers
 {
 	public class DuoConfigHelper
 	{
-		public static ConfigModel ReadAppConfig()
+		public static IConfigModel ReadAppConfig()
 		{
 			var config = new ConfigModel();
 
