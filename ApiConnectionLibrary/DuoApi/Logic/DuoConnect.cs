@@ -46,8 +46,6 @@ public class DuoConnect : DuoEndPoint
 			Console.WriteLine("Error: " + response.ErrorMessage);
 		}
 
-
-
 		Console.ReadLine();
 	}
 }
